@@ -1,0 +1,5 @@
+Masing-masing. Buat online, berkas: index-NPM.txt. Contoh: index-2004112345.txt
+Isi: 
+* Nama lengkap: Al Yafi
+* NPM: 1904111010051
+* Cita-cita: Astronout
