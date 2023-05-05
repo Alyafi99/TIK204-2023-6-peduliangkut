@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "663116432470",
+    "project_id": "peduli-angkut-d3153",
+    "storage_bucket": "peduli-angkut-d3153.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663116432470:android:e49f537a713621313f27f7",
+        "android_client_info": {
+          "package_name": "com.example.peduli_angkut"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663116432470-ck5jisq1bqn71e1uk5ukivprbls704vv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJAyH7VyU_5GeFSPwj2geZstoZP8plLvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663116432470-ck5jisq1bqn71e1uk5ukivprbls704vv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
