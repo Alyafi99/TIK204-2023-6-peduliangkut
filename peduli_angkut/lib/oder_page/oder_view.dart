@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:peduli_angkut/theme.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class OrderView extends StatefulWidget {
   OrderView({Key? key}) : super(key: key);
@@ -11,6 +13,32 @@ class OrderView extends StatefulWidget {
 class _OrderViewState extends State<OrderView> {
   TextEditingController? _alamat;
   TextEditingController? _jenisSampah;
+  TextEditingController? _berat;
+
+  final userNameController = TextEditingController();
+  final userAgeController = TextEditingController();
+  final userSalaryController = TextEditingController();
+
+  late DatabaseReference dbRef;
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
+  @override
+  void initState() {
+    super.initState();
+    dbRef = FirebaseDatabase.instance.ref().child('Data');
+  }
+
+  Future<String?> _usersname() async {
+    final SharedPreferences prefs = await _prefs;
+    final String? name = prefs.getString('nama');
+    Map<String, String> students = {
+      'condition': userNameController.text,
+      'lat': userAgeController.text,
+      'long': userSalaryController.text
+    };
+
+    dbRef.child('${name}').set(students);
+  }
 
   @override
   Widget build(BuildContext context) {
